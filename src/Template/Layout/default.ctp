@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
+        <?php echo $this->Html->charset(); ?>
         <title>Luccas Silveira – Desenvolvedor de software</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="author" content="Luccas Carvalho Silveira"/>
         <meta name="description" content="Site pessoal de Luccas Carvalho Silveira, desenvolvedor web do Rio Grande do Sul, Brasil"/>
         <meta name="keywords" content="Luccas, Carvalho, Silveira, Desenvolvedor, Software, PHP, Web, Sites, Sistemas, Informação"/>
@@ -12,18 +12,18 @@
         <meta property="og:locale" content="pt_BR">
         <meta property="og:title" content="Luccas Silveira">
         <meta property="og:site_name" content="Luccas Silveira">
-        <meta property="og:description" content="Site pessoal de Luccas Carvalho Silveira, desenvolvedor web do Rio Grande do Sul, Brasil">
+        <meta property="og:description" content="Site pessoal de Luccas Carvalho Silveira, desenvolvedor de software full-stack do Rio Grande do Sul, Brasil">
         <meta property="og:image" content="http://lu2cas.com.br/assets/images/favicon.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="200">
         <meta property="og:image:height" content="200">
         <meta property="og:type" content="website">
         <link href="assets/images/favicon.png" type="image/x-icon" rel="shortcut icon"/>
-        <link rel="stylesheet" type="text/css" href="assets/css/frontend.css"/>
-        <link rel="stylesheet" type="text/css" href="assets/fontawesome/svg-with-js/css/fa-svg-with-js.css"/>
-        <script src="assets/jquery/dist/jquery.min.js"></script>
-        <script src="assets/fontawesome/svg-with-js/js/fontawesome-all.js"></script>
-        <script src="assets/js/frontend.js"></script>
+        <?php echo $this->Html->css('frontend.css'); ?>
+        <?php echo $this->Html->css('fontawesome/svg-with-js/css/fa-svg-with-js.css'); ?>
+        <?php echo $this->Html->js('jquery/dist/jquery.min.js'); ?>
+        <?php echo $this->Html->js('fontawesome/svg-with-js/js/fontawesome-all.js'); ?>
+        <?php echo $this->Html->js('frontend.js'); ?>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
