@@ -1,57 +1,40 @@
-<?php
-/**
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
-
-$cakeDescription = 'CakePHP: the rapid development php framework';
-?>
 <!DOCTYPE html>
-<html>
-<head>
-    <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
-    </title>
-    <?= $this->Html->meta('icon') ?>
+<html lang="pt-BR">
+    <head>
+        <title>Luccas Silveira – Desenvolvedor de software</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="author" content="Luccas Carvalho Silveira"/>
+        <meta name="description" content="Site pessoal de Luccas Carvalho Silveira, desenvolvedor web do Rio Grande do Sul, Brasil"/>
+        <meta name="keywords" content="Luccas, Carvalho, Silveira, Desenvolvedor, Software, PHP, Web, Sites, Sistemas, Informação"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=3"/>
+        <meta name="robots" content="index, follow">
+        <meta property="og:url" content="http://lu2cas.com.br">
+        <meta property="og:locale" content="pt_BR">
+        <meta property="og:title" content="Luccas Silveira">
+        <meta property="og:site_name" content="Luccas Silveira">
+        <meta property="og:description" content="Site pessoal de Luccas Carvalho Silveira, desenvolvedor web do Rio Grande do Sul, Brasil">
+        <meta property="og:image" content="http://lu2cas.com.br/assets/images/favicon.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="200">
+        <meta property="og:image:height" content="200">
+        <meta property="og:type" content="website">
+        <link href="assets/images/favicon.png" type="image/x-icon" rel="shortcut icon"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/frontend.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/fontawesome/svg-with-js/css/fa-svg-with-js.css"/>
+        <script src="assets/jquery/dist/jquery.min.js"></script>
+        <script src="assets/fontawesome/svg-with-js/js/fontawesome-all.js"></script>
+        <script src="assets/js/frontend.js"></script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
-
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
-</head>
-<body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
-            </ul>
-        </div>
-    </nav>
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
+            ga('create', 'UA-74371832-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
+    <body id="home-content">
         <?= $this->fetch('content') ?>
-    </div>
-    <footer>
-    </footer>
-</body>
+    </body>
 </html>
