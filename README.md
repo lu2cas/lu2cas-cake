@@ -1,2 +1,2 @@
-# lu2cas-cake
+# lu2cas-dynamic
 Meu site pessoal (versão dinâmica)
