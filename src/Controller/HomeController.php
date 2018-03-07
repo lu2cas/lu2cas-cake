@@ -15,6 +15,7 @@ class HomeController extends AppController
      */
     public function index()
     {
+        $this->layout = 'home';
         $articles = [
             0 => [
                 'title' => 'Lorem ipsum dolor sit amet consectetur',
@@ -23,7 +24,6 @@ class HomeController extends AppController
                 'slug' => 'lorem-ipsum-dolor-sit-amet-consectetur'
             ]
         ];
-
         $this->set(compact('articles'));
     }
 }

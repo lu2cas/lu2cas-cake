@@ -331,117 +331,6 @@ header, main, section {
     margin-bottom: 50px;
 }
 
-#home-content header {
-    padding: 50px 0;
-    text-align: center;
-    background-color: #111;
-    background-image: url('../img/background.jpg');
-    background-position: center center;
-    background-size: cover;
-}
-
-#home-content header #profile-picture {
-    width: 150px;
-    margin-bottom: 10px;
-    display: inline-block;
-    border-radius: 50%;
-    box-shadow: 0 5px 15px #000;
-}
-
-#home-content header h1,
-#home-content header h2 {
-    color: #fff;
-    text-shadow: 0 5px 15px #000;
-}
-
-#home-content header h2 {
-    font-family: "Merriweather Light Italic";
-}
-
-ul#social-links li {
-    margin: 0 10px;
-}
-
-ul#social-links li a {
-    color: #fff;
-    font-size: 1.8em;
-}
-
-ul#social-links li a:hover {
-    color: #ffa600;
-}
-
-#blog ul#posts {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-}
-
-#blog ul#posts li {
-    display: block;
-    margin-bottom: 30px;
-}
-
-#blog ul#posts li:last-child {
-    margin-bottom: 0;
-}
-
-#blog #earlier-posts {
-    float: left;
-}
-
-#blog #latest-posts {
-    float: right;
-}
-
-#contact .first-column {
-    padding-right: 10px;
-}
-
-#contact .first-column p, #about #presentation p {
-    margin: 0 0 15px 0;
-    display: inline-block;
-}
-
-#contact form input,
-#contact form textarea {
-    border: 3px solid #dadada;
-    background-color: #efefef;
-    padding: 12px;
-    width: 100%;
-    margin-bottom: 15px;
-    font-family: 'Merriweather Light', 'Times New Roman';
-    font-size: 1.8em;
-    box-sizing: border-box;
-    border-radius: 3px;
-}
-
-#contact form input:focus,
-#contact form textarea:focus {
-    border: 3px solid #dadada;
-}
-
-#contact form textarea {
-    height: 200px;
-    resize: none;
-}
-
-#contact form #send {
-    margin: 15px 0 0 0;
-    float: right;
-    background-color: #dadada;
-    border: none;
-    width: 50%;
-    color: #fff;
-    outline: 0;
-}
-
-#contact form #send:hover {
-    border: none;
-    background: #ffa600;
-}
-
 footer {
     padding: 15px 0;
     text-align: center;
@@ -489,118 +378,16 @@ footer a small#cc-icon {
 footer a small#by-icon {
     background-image: url('../img/by-icon.png');
 }
-
-#post-content header #top-bar {
-    padding: 30px 0;
-    background-color: #111;
-    background-image: url('../img/background.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-}
-
-#post-content header #top-bar a {
-    color: #fff;
-}
-
-#post-content header #top-bar a:hover {
-    color: #ffa600;
-}
-
-#post-content h2 {
-    margin: 45px 0 15px 0;
-}
-
-#post-content .separator {
-    margin: 30px 0;
-}
-
-#post-content #related-links {
-    font-size: 1.8em;
-    list-style: none;
-    margin: 12px 0 0 0;
-    padding: 0;
-}
-
-#post-content #related-links li:last-child {
-    margin-bottom: 0;
-}
-
-ul#share-links li {
-    margin-right: 20px;
-}
-
-ul#share-links li a {
-    color: #222;
-    font-size: 2em;
-}
-
-ul#share-links li a:hover {
-    color: #ffa600;
-}
-
-#error-page-content header {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background-color: #111;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: scroll;
-    background-image: url('../img/background.jpg');
-    text-align: center;
-}
-
-#error-page-content #error-message {
-    width: 100%;
-    padding: 0 1.6%;
-    color: #ffa600;
-    position: absolute;
-    top: 40%;
-}
-
-#error-page-content #error-message h1 {
-    margin-bottom: 5px;
-}
-
-#error-page-content #error-message h2 {
-    color: #efefef;
-}
-
-#error-page-content #error-message p {
-    font-family: "Roboto Regular", "Arial";
-    margin-top: 30px;
-    color: #efefef;
-    font-size: 1.8em;
-}
-
-#error-page-content #error-message a {
-    color: #efefef;
-}
-
-#error-page-content #error-message a:hover {
-    color: #ffa600;
-}
 /* Body style - End */
 
 /* Media queries - Begin */
 @media screen and (max-width: 1024px) {}
 
-@media screen and (max-width: 960px) {
-    #about #presentation {
-        width: 100%;
-    }
-}
+@media screen and (max-width: 960px) {}
 
 @media screen and (max-width: 840px) {
     .column-6 {
         width: 100%;
-    }
-
-    #contact .first-column {
-        padding-right: 0;
     }
 
     .column-6 + .column-6 {
@@ -635,17 +422,9 @@ ul#share-links li a:hover {
     footer .section-wrapper {
         margin: 0 8.466666667%;
     }
-
-    #about #presentation .column:last-child p:last-child {
-        margin: 0;
-    }
 }
 
-@media screen and (max-width: 640px) {
-    #contact form #send {
-        width: 100%;
-    }
-}
+@media screen and (max-width: 640px) {}
 
 @media screen and (max-width: 480px) {
     h1, .h1-size {

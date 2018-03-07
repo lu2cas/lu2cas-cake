@@ -1,25 +1,3 @@
-<header class="row">
-    <div class="section-wrapper column column-8">
-        <?php echo $this->Html->image('luccas-silveira.jpg', ['id' => 'profile-picture', 'alt' => 'Luccas Silveira']); ?>
-        <h1 class="h2-size">Luccas Silveira</h1>
-        <h2 class="h3-size">Desenvolvedor de software</h2>
-        <div class="separator"></div>
-        <ul id="social-links" class="inline-list">
-            <li>
-                <?php echo $this->Html->link('<span class="hidden-text">GitHub</span><i class="fab fa-github fa-lg"></i>', 'https://github.com/lu2cas', ['target' => '_blank', 'title' => 'github.com/lu2cas', 'escape' => false]); ?>
-            </li>
-            <li>
-                <?php echo $this->Html->link('<span class="hidden-text">LinkedIn</span><i class="fab fa-linkedin-in fa-lg"></i>', 'https://linkedin.com/in/lu2cas', ['target' => '_blank', 'title' => 'linkedin.com/in/lu2cas', 'escape' => false]); ?>
-            </li>
-            <li>
-                <?php echo $this->Html->link('<span class="hidden-text">Twitter</span><i class="fab fa-twitter fa-lg"></i>', 'https://twitter.com/lu2cas', ['target' => '_blank', 'title' => 'twitter.com/lu2cas', 'escape' => false]); ?>
-            </li>
-            <li>
-                <?php echo $this->Html->link('<span class="hidden-text">Facebook</span><i class="fab fa-facebook-f fa-lg"></i>', 'https://facebook.com/lu2cas', ['target' => '_blank', 'title' => 'facebook.com/lu2cas', 'escape' => false]); ?>
-            </li>
-        </ul>
-    </div>
-</header>
 <main id="about" class="row">
     <article class="section-wrapper column column-8">
         <div class="row heading">
@@ -31,8 +9,8 @@
             <div class="column column-6">
                 <p>
                     Olá, meu nome é Luccas Silveira! Sou um desenvolvedor de software full-stack
-                    com mais de <?php echo intval(date('Y')) - 2011; ?> anos de experiência projetando e codificando aplicações para a
-                    web. Também sou graduando em
+                    com mais de <?php echo intval(date('Y')) - 2011; ?> anos de experiência
+                    projetando e codificando aplicações para a web. Também sou graduando em
                     <?php echo $this->Html->link('sistemas de informação', 'http://www.pucrs.br/facin/curso/sistemas-de-informacao/', ['target' => '_blank']); ?>
                     na PUCRS e técnico em
                     <?php echo $this->Html->link('informática', 'http://portal2.ifsul.edu.br/proen/site/catalogo_curso.php?cod=61', ['target' => '_blank']); ?>
@@ -66,7 +44,7 @@
                         <p>
                             <?php echo $article['excerpt']; ?>
                         </p>
-                        <?php echo $this->Html->link('Continue lendo', ['controller' => 'blog', 'action' => 'view', $article['slug']], ['class' => 'navigation-link']); ?>
+                        <?php echo $this->Html->link('Continue lendo', ['controller' => 'Articles', 'action' => 'view', $article['slug']], ['class' => 'navigation-link']); ?>
                     </div>
                 </div>
             </li>
@@ -107,30 +85,31 @@
                 </p>
             </div>
             <div class="column column-6">
-                <?php echo $this->Form->create(null, ['url' => 'scripts/send_contact.php', 'type' => 'post', 'novalidate' => true]); ?>
+                <?php $this->Form->templates(['inputContainer' => '{{content}}', 'submitContainer' => '{{content}}']); ?>
+                <?php echo $this->Form->create(null, ['url' => ['controller' => 'Contacts', 'action' => 'add'], 'type' => 'post', 'novalidate' => true]); ?>
                     <div class="row">
                         <div class="column column-12">
-                            <input type="text" id="name" name="name" placeholder="Nome"/>
+                            <?php echo $this->Form->Control('Contacts.name', ['type' => 'text', 'placeholder' => 'Nome', 'label' => false]); ?>
                         </div>
                     </div>
                     <div class="row">
                         <div class="column column-12">
-                            <input type="email" id="email" name="email" placeholder="E-mail"/>
+                            <?php echo $this->Form->Control('Contacts.email', ['type' => 'text', 'placeholder' => 'E-mail', 'label' => false]); ?>
                         </div>
                     </div>
                     <div class="row">
                         <div class="column column-12">
-                            <input type="text" id="subject" name="subject" placeholder="Assunto"/>
+                            <?php echo $this->Form->Control('Contacts.subject', ['type' => 'text', 'placeholder' => 'Assunto', 'label' => false]); ?>
                         </div>
                     </div>
                     <div class="row">
                         <div class="column column-12">
-                            <textarea id="message" name="message" placeholder="Mensagem"></textarea>
+                            <?php echo $this->Form->Control('Contacts.message', ['type' => 'textarea', 'placeholder' => 'Mensagem', 'label' => false]); ?>
                         </div>
                     </div>
                     <div class="row">
                         <div class="column column-12">
-                            <button type="submit" id="send" class="button">Enviar</button>
+                            <?php echo $this->Form->Control('Enviar', ['type' => 'submit', 'class' => 'button', 'id' => 'send']); ?>
                         </div>
                     </div>
                 <?php echo $this->Form->end(); ?>
@@ -138,9 +117,3 @@
         </div>
     </div>
 </section>
-<footer id="footer" class="row">
-    <div class="column column-12">
-        <?php echo $this->Html->link('<small>lu2cas.com.br</small>', '/', ['target' => '_blank', 'escape' => false]); ?>
-        <?php echo $this->Html->link('<small id="cc-icon">Creative Commons</small>&nbsp;<small id="by-icon">CC-BY 4.0</small>', 'http://creativecommons.org/licenses/by/4.0/', ['target' => '_blank', 'rel' => 'license', 'escape' => false]); ?>
-    </div>
-</footer>

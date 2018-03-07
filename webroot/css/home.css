@@ -1,0 +1,147 @@
+/* Home style - Begin */
+header {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #111;
+    background-image: url('../img/background.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+header #profile-picture {
+    width: 150px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px #000;
+}
+
+header h1,
+header h2 {
+    color: #fff;
+    text-shadow: 0 5px 15px #000;
+}
+
+header h2 {
+    font-family: "Merriweather Light Italic";
+}
+
+ul#social-links li {
+    margin: 0 10px;
+}
+
+ul#social-links li a {
+    color: #fff;
+    font-size: 1.8em;
+}
+
+ul#social-links li a:hover {
+    color: #ffa600;
+}
+
+#blog ul#posts {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+#blog ul#posts li {
+    display: block;
+    margin-bottom: 30px;
+}
+
+#blog ul#posts li:last-child {
+    margin-bottom: 0;
+}
+
+#blog #earlier-posts {
+    float: left;
+}
+
+#blog #latest-posts {
+    float: right;
+}
+
+#contact .first-column {
+    padding-right: 10px;
+}
+
+#contact .first-column p, #about #presentation p {
+    margin: 0 0 15px 0;
+    display: inline-block;
+}
+
+#contact form input,
+#contact form textarea {
+    border: 3px solid #dadada;
+    background-color: #efefef;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: 'Merriweather Light', 'Times New Roman';
+    font-size: 1.8em;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border: 3px solid #dadada;
+}
+
+#contact form textarea {
+    height: 200px;
+    resize: none;
+}
+
+#contact form #send {
+    margin: 15px 0 0 0;
+    padding: 18px 0;
+    float: right;
+    background-color: #dadada;
+    font-family: "Roboto Black", "Arial Black";
+    font-size: 1.2em;
+    border: none;
+    width: 50%;
+    color: #fff;
+    outline: 0;
+}
+
+#contact form #send:hover {
+    border: none;
+    background: #ffa600;
+}
+/* Home style - End */
+
+/* Media queries - Begin */
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 960px) {
+    #about #presentation {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    #contact .first-column {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #about #presentation .column:last-child p:last-child {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #contact form #send {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {}
+
+@media screen and (max-width: 320px) {}
+/* Media queries - End */
