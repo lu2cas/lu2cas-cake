@@ -15,7 +15,7 @@ class HomeController extends AppController
      */
     public function index()
     {
-        $this->layout = 'home';
+        $this->viewBuilder()->setLayout('home');
         $articles = [
             0 => [
                 'title' => 'Lorem ipsum dolor sit amet consectetur',
