@@ -15,8 +15,15 @@ class HomeController extends AppController
      */
     public function index()
     {
-        $about = 'Lorem ispum dolor';
+        $articles = [
+            0 => [
+                'title' => 'Lorem ipsum dolor sit amet consectetur',
+                'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas leo sit amet neque aliquam, in congue metus vehicula. Nullam rutrum nec libero at iaculis.',
+                'date' => '01 de janeiro de 2018',
+                'slug' => 'lorem-ipsum-dolor-sit-amet-consectetur'
+            ]
+        ];
 
-        $this->set(compact('about'));
+        $this->set(compact('articles'));
     }
 }
