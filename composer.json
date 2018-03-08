@@ -1,9 +1,9 @@
 {
-    "name": "lu2cas/lu2cas",
+    "name": "lu2cas/lu2cas-dynamic",
     "description": "Meu site pessoal",
     "homepage": "https://lu2cas.com.br",
     "type": "project",
-    "license": "GNU GPL v3.0",
+    "license": "MIT",
     "require": {
         "php": ">=5.6",
         "cakephp/cakephp": "3.5.*",
@@ -27,13 +27,15 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "Admin\\": "./plugins/Admin/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "App\\Test\\": "tests/",
-            "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
+            "Cake\\Test\\": "vendor/cakephp/cakephp/tests/",
+            "Admin\\Test\\": "./plugins/Admin/tests"
         }
     },
     "scripts": {

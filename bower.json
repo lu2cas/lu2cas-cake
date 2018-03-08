@@ -1,24 +1,24 @@
 {
-  "name": "lu2cas",
-  "homepage": "http://lu2cas.com.br",
-  "authors": [
-    "Luccas Carvalho Silveira <contato@lu2cas.com.br>"
-  ],
-  "license": "GPL v3.0",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "assets",
-    "test",
-    "tests",
-    "bower_components"
-  ],
-  "directory": "vendor",
-  "dependencies": {
-    "jquery": "^3.1.1",
-    "highlightjs": "*",
-    "components-font-awesome": "*"
-  },
-  "description": "Meu site pessoal.",
-  "main": ""
+    "name": "lu2cas",
+    "homepage": "https://lu2cas.com.br",
+    "authors": [
+        "Luccas C. Silveira <contato@lu2cas.com.br>"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "assets",
+        "test",
+        "tests",
+        "bower_components",
+        "webroot/vendor"
+    ],
+    "dependencies": {
+        "jquery": "^3.1.1",
+        "highlightjs": "*",
+        "components-font-awesome": "*"
+    },
+    "description": "Meu site pessoal.",
+    "main": "index.php"
 }
