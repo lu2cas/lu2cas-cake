@@ -1,0 +1,88 @@
+<?php
+namespace Admin\Model\Table;
+
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+/**
+ * Groups Model
+ *
+ * @property \Admin\Model\Table\UsersTable|\Cake\ORM\Association\HasMany $Users
+ *
+ * @method \Admin\Model\Entity\Group get($primaryKey, $options = [])
+ * @method \Admin\Model\Entity\Group newEntity($data = null, array $options = [])
+ * @method \Admin\Model\Entity\Group[] newEntities(array $data, array $options = [])
+ * @method \Admin\Model\Entity\Group|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \Admin\Model\Entity\Group patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \Admin\Model\Entity\Group[] patchEntities($entities, array $data, array $options = [])
+ * @method \Admin\Model\Entity\Group findOrCreate($search, callable $callback = null, $options = [])
+ */
+class GroupsTable extends Table
+{
+
+    /**
+     * Initialize method
+     *
+     * @param array $config The configuration for the Table.
+     * @return void
+     */
+    public function initialize(array $config)
+    {
+        parent::initialize($config);
+
+        $this->setTable('groups');
+        $this->setDisplayField('name');
+        $this->setPrimaryKey('id');
+
+        $this->hasMany('Users', [
+            'foreignKey' => 'group_id',
+            'className' => 'Admin.Users'
+        ]);
+    }
+
+    /**
+     * Default validation rules.
+     *
+     * @param \Cake\Validation\Validator $validator Validator instance.
+     * @return \Cake\Validation\Validator
+     */
+    public function validationDefault(Validator $validator)
+    {
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
+            ->scalar('name')
+            ->maxLength('name', 255)
+            ->requirePresence('name', 'create')
+            ->notEmpty('name');
+
+        $validator
+            ->boolean('active')
+            ->requirePresence('active', 'create')
+            ->notEmpty('active');
+
+        $validator
+            ->dateTime('created_on')
+            ->requirePresence('created_on', 'create')
+            ->notEmpty('created_on');
+
+        $validator
+            ->dateTime('last_modified_on')
+            ->allowEmpty('last_modified_on');
+
+        $validator
+            ->integer('created_by')
+            ->requirePresence('created_by', 'create')
+            ->notEmpty('created_by');
+
+        $validator
+            ->integer('last_modified_by')
+            ->allowEmpty('last_modified_by');
+
+        return $validator;
+    }
+}
