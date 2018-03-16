@@ -1,5 +1,5 @@
 /* Article style - Begin */
-header #top-bar {
+body > header #top-bar {
     padding: 30px 0;
     background-color: #111;
     background-image: url('../img/background.jpg');
@@ -9,11 +9,11 @@ header #top-bar {
     color: #fff;
 }
 
-header #top-bar a {
+body > header #top-bar a {
     color: #fff;
 }
 
-header #top-bar a:hover {
+body > header #top-bar a:hover {
     color: #ffa600;
 }
 
