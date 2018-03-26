@@ -1,25 +1,49 @@
 /* Home style - Begin */
-body > header {
-    padding: 50px 0;
+#main-menu {
+    text-transform: capitalize;
+}
+
+#main-menu ul {
     text-align: center;
+}
+
+#main-menu ul li {
+    height: 60px;
+    margin: 0 20px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#main-menu ul li a {
+    font-family: "Roboto Black";
+    text-decoration: none;
+}
+
+#main-menu ul li:hover {
+    border-bottom: 10px solid #ffa600;
+}
+
+#credentials {
+    padding: 40px 0;
+    text-align: center;
+    /*background: blue;*/
     background-color: #111;
     background-image: url('../img/background.jpg');
-    background-position: center center;
+    background-position: top center;
     background-size: cover;
 }
 
-body > header #profile-picture {
+#credentials #profile-picture {
     width: 150px;
     margin-bottom: 10px;
     display: inline-block;
     border-radius: 50%;
-    box-shadow: 0 5px 15px #000;
 }
 
-body > header h1,
-body > header h2 {
+#credentials h1,
+#credentials h2 {
     color: #fff;
-    text-shadow: 0 5px 15px #000;
 }
 
 body > header h2 {
@@ -138,6 +162,10 @@ ul#social-links li a:hover {
 @media screen and (max-width: 640px) {
     #contact form #send {
         width: 100%;
+    }
+
+    #main-menu .h3-size {
+        font-size: 1.5em;
     }
 }
 

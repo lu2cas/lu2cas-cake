@@ -39,7 +39,14 @@
     </head>
     <body>
         <header class="row">
-            <div class="section-wrapper column column-8">
+            <nav id="main-menu" class="column column-12">
+                <ul class="inline-list h3-size">
+                    <li><?php echo $this->Html->link('Sobre', '#about'); ?></li>
+                    <li><?php echo $this->Html->link('Blog', '#blog'); ?></li>
+                    <li><?php echo $this->Html->link('Contato', '#contact'); ?></li>
+                </ul>
+            </nav>
+            <div id="credentials" class="column column-12">
                 <?php echo $this->Html->image('luccas-silveira.jpg', ['id' => 'profile-picture', 'alt' => 'Luccas Silveira']); ?>
                 <h1 class="h2-size">Luccas Silveira</h1>
                 <h2 class="h3-size">Desenvolvedor de software</h2>

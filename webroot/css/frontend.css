@@ -15,6 +15,11 @@
 }
 
 @font-face {
+    font-family: 'Merriweather Bold Italic';
+    src: url('../font/Merriweather-Bold-Italic.ttf');
+}
+
+@font-face {
     font-family: 'Roboto Regular';
     src: url('../font/Roboto-Regular.ttf');
 }
@@ -328,11 +333,11 @@ body > header, body > main, body > section {
 }
 
 body > footer {
-    padding: 15px 0;
+    padding: 25px 0;
     text-align: center;
     background-color: #111;
     background-image: url('../img/background.jpg');
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
 }
