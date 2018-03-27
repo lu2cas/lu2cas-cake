@@ -1,20 +1,11 @@
 $('document').ready(function() {
-    $('#sandwich-menu span').click(function() {
-        $('#sandwich-menu').toggleClass('gray-background');
-        $('#main-menu').toggleClass('show');
-    });
-
     $('#main-menu a').click(function(e) {
         e.preventDefault();
-
-        if ($('#sandwich-menu span').is(':visible')) {
-            $('#sandwich-menu span').click();
-        }
 
         var element = $(this).attr('href');
 
         $('html, body').animate({
-            scrollTop: $(element).offset().top
+            scrollTop: $(element).offset().top - 75
         }, 300);
     });
 

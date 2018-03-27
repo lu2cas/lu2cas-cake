@@ -1,6 +1,12 @@
 /* Home style - Begin */
 #main-menu {
+    display: inline-block;
+    width: 100%;
     text-transform: capitalize;
+    background: #111;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
 }
 
 #main-menu ul {
@@ -9,8 +15,8 @@
 
 #main-menu ul li {
     height: 60px;
-    margin: 0 20px;
-    padding-top: 20px;
+    width: 100px;
+    padding-top: 15px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -18,16 +24,17 @@
 #main-menu ul li a {
     font-family: "Roboto Black";
     text-decoration: none;
+    color: #eee;
 }
 
 #main-menu ul li:hover {
     border-bottom: 10px solid #ffa600;
+    color: #fff;
 }
 
 #credentials {
-    padding: 40px 0;
+    padding: 100px 0 60px 0;
     text-align: center;
-    /*background: blue;*/
     background-color: #111;
     background-image: url('../img/background.jpg');
     background-position: top center;
@@ -166,6 +173,12 @@ ul#social-links li a:hover {
 
     #main-menu .h3-size {
         font-size: 1.5em;
+    }
+
+    #main-menu ul li {
+        height: 50px;
+        padding-top: 15px;
+        width: 70px;
     }
 }
 

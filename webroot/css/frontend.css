@@ -306,7 +306,7 @@ ul.inline-list li {
 }
 
 .separator {
-    width: 90px;
+    width: 70px;
     height: 10px;
     box-sizing: border-box;
     background-color: #ffa600;
@@ -333,7 +333,7 @@ body > header, body > main, body > section {
 }
 
 body > footer {
-    padding: 25px 0;
+    padding: 18px 0;
     text-align: center;
     background-color: #111;
     background-image: url('../img/background.jpg');
@@ -344,27 +344,19 @@ body > footer {
 
 body > footer small {
     display: inline-block;
+    color: #fff;
     vertical-align: middle;
     font-size: 1.2em;
 }
 
-body > footer a {
-    color: #efefef;
-    letter-spacing: 1px;
-    font-family: "Roboto Black", "Arial Black";
+body > footer a[rel="license"] {
+    margin: 0 0 5px 0;
     text-decoration: none;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-body > footer a:hover {
-    color: #efefef;
 }
 
 body > footer a[rel="license"] small {
     width: 25px;
     height: 25px;
-    display: inline-block;
     text-indent: -9999px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -422,7 +414,16 @@ body > footer a small#by-icon {
     }
 }
 
-@media screen and (max-width: 640px) {}
+@media screen and (max-width: 640px) {
+    body > footer {
+        padding: 15px 0;
+    }
+
+    body > footer a[rel="license"] {
+        display: block;
+        margin: 0 0 5px 0;
+    }
+}
 
 @media screen and (max-width: 480px) {
     h1, .h1-size {
