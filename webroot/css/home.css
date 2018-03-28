@@ -1,43 +1,44 @@
 /* Home style - Begin */
 #main-menu {
-    display: inline-block;
-    width: 100%;
-    text-transform: capitalize;
-    background: #111;
+    height: 63px;
     position: fixed;
     top: 0;
-    z-index: 9999;
+    left: 0;
+    width: 100%;
+    background: #111;
+    z-index: 10;
 }
 
 #main-menu ul {
-    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    display: table;
 }
 
 #main-menu ul li {
-    height: 60px;
-    width: 100px;
-    padding-top: 15px;
+    display: table-cell;
     box-sizing: border-box;
-    text-align: center;
 }
 
 #main-menu ul li a {
+    padding: 10px 20px;
+    display: block;
     font-family: "Roboto Black";
     text-decoration: none;
-    color: #eee;
-}
-
-#main-menu ul li:hover {
-    border-bottom: 10px solid #ffa600;
     color: #fff;
 }
 
+#main-menu ul .active a {
+    border-bottom: 10px solid #ffa600;
+}
+
 #credentials {
-    padding: 100px 0 60px 0;
+    padding: 110px 0 60px 0;
     text-align: center;
     background-color: #111;
     background-image: url('../img/background.jpg');
-    background-position: top center;
+    background-position: bottom center;
     background-size: cover;
 }
 

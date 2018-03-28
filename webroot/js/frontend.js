@@ -1,22 +1,45 @@
 $('document').ready(function() {
-    $('#main-menu a').click(function(e) {
+    var lastId,
+    topMenu = $('#main-menu'),
+    topMenuHeight = topMenu.outerHeight() + 1,
+    menuItems = topMenu.find('a'),
+    scrollItems = menuItems.map(function() {
+        var item = $($(this).attr('href'));
+        if (item.length) {
+            return item;
+        }
+    });
+    menuItems.click(function(e) {
         e.preventDefault();
-
-        var element = $(this).attr('href');
-
-        $('html, body').animate({
-            scrollTop: $(element).offset().top - 75
-        }, 300);
+        var href = $(this).attr('href'),
+        offsetTop = href === '#' ? 0 : $(href).offset().top - topMenuHeight + 1;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 350);
+    });
+    $(window).scroll(function() {
+        var fromTop = $(this).scrollTop() + topMenuHeight;
+        var cur = scrollItems.map(function() {
+            if ($(this).offset().top - 20 < fromTop) {
+                return this;
+            }
+        });
+        cur = cur[cur.length - 1];
+        var id = cur && cur.length ? cur[0].id : '';
+        if (lastId !== id) {
+            lastId = id;
+            menuItems
+                .parent().removeClass('active')
+                .end().filter('[href="#' + id + '"]').parent().addClass('active');
+        }
     });
 
     $('#contact-form #send').click(function(e) {
         e.preventDefault();
-
         var submit = $(this);
         var form = submit.closest('form');
         var url = form.attr('action');
         var post = form.serialize();
-
         $.ajax({
             type: 'post',
             url: url,

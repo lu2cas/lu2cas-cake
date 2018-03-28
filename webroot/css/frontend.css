@@ -306,7 +306,7 @@ ul.inline-list li {
 }
 
 .separator {
-    width: 70px;
+    width: 90px;
     height: 10px;
     box-sizing: border-box;
     background-color: #ffa600;
@@ -329,11 +329,11 @@ ul.inline-list li {
 }
 
 body > header, body > main, body > section {
-    margin-bottom: 50px;
+    padding: 25px 0;
 }
 
 body > footer {
-    padding: 18px 0;
+    padding: 20px 0;
     text-align: center;
     background-color: #111;
     background-image: url('../img/background.jpg');
