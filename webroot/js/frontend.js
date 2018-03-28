@@ -20,7 +20,7 @@ $('document').ready(function() {
     $(window).scroll(function() {
         var fromTop = $(this).scrollTop() + topMenuHeight;
         var cur = scrollItems.map(function() {
-            if ($(this).offset().top - 20 < fromTop) {
+            if ($(this).offset().top < fromTop) {
                 return this;
             }
         });

@@ -3,5 +3,5 @@
         <small id="cc-icon">Creative Commons</small>
         <small id="by-icon">CC-BY 4.0</small>
     </a>
-    <small>Todo o conteúdo deste site está disponível sob a licença CC-BY 4.0.</small>
+    <small id="license">Todo o conteúdo deste site está disponível sob a licença CC BY 4.0</small>
 </div>

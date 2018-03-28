@@ -337,7 +337,7 @@ body > footer {
     text-align: center;
     background-color: #111;
     background-image: url('../img/background.jpg');
-    background-position: top center;
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -350,8 +350,11 @@ body > footer small {
 }
 
 body > footer a[rel="license"] {
-    margin: 0 0 5px 0;
     text-decoration: none;
+}
+
+body > footer #license {
+    margin-left: 5px;
 }
 
 body > footer a[rel="license"] small {
