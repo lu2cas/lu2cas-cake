@@ -2,7 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use \Cake\Datasource\Exception\RecordNotFoundException;
 /**
  * Articles Controller
  *
@@ -15,22 +15,21 @@ class ArticlesController extends AppController
     /**
      * View method
      *
-     * @param string|null $id Article id.
+     * @param string|null $slug Article slug.
      * @return \Cake\Http\Response|void
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function view($slug = null)
     {
         $this->viewBuilder()->setLayout('article');
-        try {
-            $article = $this->Articles->find('all')
-                ->where(['slug' => $slug])
-                ->limit(1)
-                ->contain(['Tags'])
-                ->first();
-        } catch(Exception $e) {
-            // @todo Throw flash message
-            return false;
+        $article = $this->Articles->find('all')
+            ->where(['slug' => $slug])
+            ->limit(1)
+            ->contain(['Tags'])
+            ->first();
+
+        if (is_null($article)) {
+            throw new RecordNotFoundException("Artigo não encontrado!", 404);
         }
         $this->set('article', $article);
     }
