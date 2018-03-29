@@ -328,8 +328,16 @@ ul.inline-list li {
     margin: 0 16.933333333334%;
 }
 
-body > header, body > main, body > section {
+body > main, body > section {
     padding: 25px 0;
+}
+
+body > header {
+    padding: 0 0 25px 0;
+}
+
+body > footer {
+    margin: 100px 0 0 0;
 }
 
 body > footer {
@@ -419,6 +427,7 @@ body > footer a small#by-icon {
 
 @media screen and (max-width: 640px) {
     body > footer {
+        margin: 50px 0 0 0;
         padding: 15px 0;
     }
 

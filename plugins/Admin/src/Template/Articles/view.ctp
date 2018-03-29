@@ -31,12 +31,20 @@
             <td><?= $this->Number->format($article->id) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Created') ?></th>
-            <td><?= h($article->created) ?></td>
+            <th scope="row"><?= __('Created By') ?></th>
+            <td><?= $this->Number->format($article->created_by) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Modified') ?></th>
-            <td><?= h($article->modified) ?></td>
+            <th scope="row"><?= __('Last Modified By') ?></th>
+            <td><?= $this->Number->format($article->last_modified_by) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Created On') ?></th>
+            <td><?= h($article->created_on) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Last Modified On') ?></th>
+            <td><?= h($article->last_modified_on) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Published') ?></th>
@@ -47,6 +55,10 @@
         <h4><?= __('Body') ?></h4>
         <?= $this->Text->autoParagraph(h($article->body)); ?>
     </div>
+    <div class="row">
+        <h4><?= __('Excerpt') ?></h4>
+        <?= $this->Text->autoParagraph(h($article->excerpt)); ?>
+    </div>
     <div class="related">
         <h4><?= __('Related Tags') ?></h4>
         <?php if (!empty($article->tags)): ?>
@@ -55,8 +67,10 @@
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Title') ?></th>
                 <th scope="col"><?= __('Active') ?></th>
-                <th scope="col"><?= __('Created') ?></th>
-                <th scope="col"><?= __('Modified') ?></th>
+                <th scope="col"><?= __('Created On') ?></th>
+                <th scope="col"><?= __('Last Modified On') ?></th>
+                <th scope="col"><?= __('Created By') ?></th>
+                <th scope="col"><?= __('Last Modified By') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($article->tags as $tags): ?>
@@ -64,8 +78,10 @@
                 <td><?= h($tags->id) ?></td>
                 <td><?= h($tags->title) ?></td>
                 <td><?= h($tags->active) ?></td>
-                <td><?= h($tags->created) ?></td>
-                <td><?= h($tags->modified) ?></td>
+                <td><?= h($tags->created_on) ?></td>
+                <td><?= h($tags->last_modified_on) ?></td>
+                <td><?= h($tags->created_by) ?></td>
+                <td><?= h($tags->last_modified_by) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Tags', 'action' => 'view', $tags->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Tags', 'action' => 'edit', $tags->id]) ?>

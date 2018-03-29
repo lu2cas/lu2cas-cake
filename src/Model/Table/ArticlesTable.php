@@ -1,5 +1,5 @@
 <?php
-namespace Admin\Model\Table;
+namespace App\Model\Table;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
@@ -9,15 +9,15 @@ use Cake\Validation\Validator;
 /**
  * Articles Model
  *
- * @property \Admin\Model\Table\TagsTable|\Cake\ORM\Association\BelongsToMany $Tags
+ * @property \App\Model\Table\TagsTable|\Cake\ORM\Association\BelongsToMany $Tags
  *
- * @method \Admin\Model\Entity\Article get($primaryKey, $options = [])
- * @method \Admin\Model\Entity\Article newEntity($data = null, array $options = [])
- * @method \Admin\Model\Entity\Article[] newEntities(array $data, array $options = [])
- * @method \Admin\Model\Entity\Article|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \Admin\Model\Entity\Article patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \Admin\Model\Entity\Article[] patchEntities($entities, array $data, array $options = [])
- * @method \Admin\Model\Entity\Article findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\Article get($primaryKey, $options = [])
+ * @method \App\Model\Entity\Article newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\Article[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\Article|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Article patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\Article[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\Article findOrCreate($search, callable $callback = null, $options = [])
  */
 class ArticlesTable extends Table
 {
@@ -39,8 +39,7 @@ class ArticlesTable extends Table
         $this->belongsToMany('Tags', [
             'foreignKey' => 'article_id',
             'targetForeignKey' => 'tag_id',
-            'joinTable' => 'articles_tags',
-            'className' => 'Admin.Tags'
+            'joinTable' => 'articles_tags'
         ]);
     }
 
@@ -71,13 +70,7 @@ class ArticlesTable extends Table
 
         $validator
             ->scalar('body')
-            ->requirePresence('body', 'create')
-            ->notEmpty('body');
-
-        $validator
-            ->scalar('excerpt')
-            ->requirePresence('excerpt', 'create')
-            ->notEmpty('excerpt');
+            ->allowEmpty('body');
 
         $validator
             ->boolean('published')

@@ -1,11 +1,11 @@
 <?php
-namespace Admin\Test\TestCase\Controller;
+namespace App\Test\TestCase\Controller;
 
-use Admin\Controller\ArticlesController;
+use App\Controller\ArticlesController;
 use Cake\TestSuite\IntegrationTestCase;
 
 /**
- * Admin\Controller\ArticlesController Test Case
+ * App\Controller\ArticlesController Test Case
  */
 class ArticlesControllerTest extends IntegrationTestCase
 {
@@ -16,9 +16,9 @@ class ArticlesControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-        'plugin.admin.articles',
-        'plugin.admin.tags',
-        'plugin.admin.articles_tags'
+        'app.articles',
+        'app.tags',
+        'app.articles_tags'
     ];
 
     /**

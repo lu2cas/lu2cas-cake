@@ -40,7 +40,7 @@
                 <div class="column column-12">
                     <div class="card">
                         <h3><?php echo $article['title']; ?></h3>
-                        <span class="post-info h4-size"><?php echo $article['date']; ?></span>
+                        <span class="post-info h4-size"><?php echo $article['created_on']; ?></span>
                         <p>
                             <?php echo $article['excerpt']; ?>
                         </p>

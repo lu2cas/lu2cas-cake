@@ -1,5 +1,5 @@
 <?php
-namespace Admin\Model\Entity;
+namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
 
@@ -10,14 +10,13 @@ use Cake\ORM\Entity;
  * @property string $title
  * @property string $slug
  * @property string $body
- * @property string $excerpt
  * @property bool $published
  * @property \Cake\I18n\FrozenTime $created_on
  * @property \Cake\I18n\FrozenTime $last_modified_on
  * @property int $created_by
  * @property int $last_modified_by
  *
- * @property \Admin\Model\Entity\Tag[] $tags
+ * @property \App\Model\Entity\Tag[] $tags
  */
 class Article extends Entity
 {
@@ -35,7 +34,6 @@ class Article extends Entity
         'title' => true,
         'slug' => true,
         'body' => true,
-        'excerpt' => true,
         'published' => true,
         'created_on' => true,
         'last_modified_on' => true,

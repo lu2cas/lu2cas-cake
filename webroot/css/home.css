@@ -34,7 +34,7 @@
 }
 
 #credentials {
-    padding: 100px 0 60px 0;
+    padding: 120px 0 60px 0;
     text-align: center;
     background-color: #111;
     background-image: url('../img/background.jpg');
@@ -93,10 +93,6 @@ ul#social-links li a:hover {
 
 #blog #latest-posts {
     float: right;
-}
-
-#contact {
-    margin-bottom: 100px;
 }
 
 #contact .first-column {
@@ -181,12 +177,8 @@ ul#social-links li a:hover {
     }
 
     #main-menu ul li a {
-        padding: 15px 20px 0 20px;
+        padding: 15px 15px 0 15px;
         height: 50px;
-    }
-
-    #contact {
-        margin-bottom: 50px;
     }
 }
 

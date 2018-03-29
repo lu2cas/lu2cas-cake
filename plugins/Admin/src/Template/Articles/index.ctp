@@ -21,8 +21,10 @@
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('slug') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('published') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('created_on') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('last_modified_on') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('created_by') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('last_modified_by') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -33,8 +35,10 @@
                 <td><?= h($article->title) ?></td>
                 <td><?= h($article->slug) ?></td>
                 <td><?= h($article->published) ?></td>
-                <td><?= h($article->created) ?></td>
-                <td><?= h($article->modified) ?></td>
+                <td><?= h($article->created_on) ?></td>
+                <td><?= h($article->last_modified_on) ?></td>
+                <td><?= $this->Number->format($article->created_by) ?></td>
+                <td><?= $this->Number->format($article->last_modified_by) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $article->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $article->id]) ?>

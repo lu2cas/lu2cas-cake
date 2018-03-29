@@ -2,18 +2,18 @@
 <html lang="pt-BR">
     <head>
         <?php echo $this->Html->charset(); ?>
-        <title><?php echo 'Luccas Silveira – ' . $article['title']; ?></title>
-        <?php echo $this->Html->meta('author', $article['author']); ?>
-        <?php echo $this->Html->meta('description', $article['excerpt']); ?>
-        <?php echo $this->Html->meta('keywords', $article['keywords']); ?>
+        <title><?php echo 'Luccas Silveira – ' . $article->title; ?></title>
+        <?php echo $this->Html->meta('author', ''); ?>
+        <?php echo $this->Html->meta('description', $article->excerpt); ?>
+        <?php echo $this->Html->meta('keywords', ''); ?>
         <?php echo $this->Html->meta('viewport', 'width=device-width, height=device-height, initial-scale=1, maximum-scale=3'); ?>
         <?php echo $this->Html->meta('robots', 'index, follow'); ?>
         <?php echo $this->Html->meta('favicon.png', 'img/favicon.png', ['type' => 'icon']); ?>
         <meta property="og:url" content="https://lu2cas.com.br">
         <meta property="og:locale" content="pt_BR">
-        <meta property="og:title" content="<?php echo $article['title']; ?>">
+        <meta property="og:title" content="<?php echo $article->title; ?>">
         <meta property="og:site_name" content="Luccas Silveira">
-        <meta property="og:description" content="<?php echo $article['excerpt']; ?>">
+        <meta property="og:description" content="<?php echo $article->excerpt; ?>">
         <meta property="og:image" content="https://lu2cas.com.br/img/favicon.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="200">

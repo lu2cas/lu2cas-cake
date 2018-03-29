@@ -16,14 +16,11 @@ class HomeController extends AppController
     public function index()
     {
         $this->viewBuilder()->setLayout('home');
-        $articles = [
-            0 => [
-                'title' => 'Lorem ipsum dolor sit amet consectetur',
-                'excerpt' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas leo sit amet neque aliquam, in congue metus vehicula. Nullam rutrum nec libero at iaculis.',
-                'date' => '01 de janeiro de 2018',
-                'slug' => 'lorem-ipsum-dolor-sit-amet-consectetur'
-            ]
-        ];
+        $article_entity = $this->loadModel('Articles');
+        $articles = $article_entity->find('all')
+            ->order(['Articles.created_on' => 'DESC'])
+            ->limit(5)
+            ->contain(['Tags']);
         $this->set(compact('articles'));
     }
 }

@@ -20,7 +20,12 @@
             echo $this->Form->control('title');
             echo $this->Form->control('slug');
             echo $this->Form->control('body');
+            echo $this->Form->control('excerpt');
             echo $this->Form->control('published');
+            echo $this->Form->control('created_on');
+            echo $this->Form->control('last_modified_on', ['empty' => true]);
+            echo $this->Form->control('created_by');
+            echo $this->Form->control('last_modified_by');
             echo $this->Form->control('tags._ids', ['options' => $tags]);
         ?>
     </fieldset>
