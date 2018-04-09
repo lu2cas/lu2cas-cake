@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: #111;
+    background: #202729;
     z-index: 10;
 }
 
@@ -30,7 +30,7 @@
 }
 
 #main-menu ul .active a {
-    border-bottom: 10px solid #ffa600;
+    background-color: #1d1d1d;
 }
 
 #credentials {
@@ -52,6 +52,7 @@
 #credentials h1,
 #credentials h2 {
     color: #fff;
+    text-shadow: 0 0 10px #111;
 }
 
 body > header h2 {
