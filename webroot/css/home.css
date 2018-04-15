@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: #202729;
+    background: #050404;
     z-index: 10;
 }
 
@@ -30,7 +30,7 @@
 }
 
 #main-menu ul .active a {
-    background-color: #1d1d1d;
+    background-color: #171717;
 }
 
 #credentials {
@@ -38,7 +38,7 @@
     text-align: center;
     background-color: #111;
     background-image: url('../img/background.jpg');
-    background-position: center center;
+    background-position: bottom center;
     background-size: cover;
 }
 
@@ -52,7 +52,7 @@
 #credentials h1,
 #credentials h2 {
     color: #fff;
-    text-shadow: 0 0 10px #111;
+    text-shadow: 0 5px 10px #111;
 }
 
 body > header h2 {
@@ -180,6 +180,10 @@ ul#social-links li a:hover {
     #main-menu ul li a {
         padding: 15px 15px 0 15px;
         height: 50px;
+    }
+
+    #credentials {
+        padding: 100px 0 50px 0;
     }
 }
 

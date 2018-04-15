@@ -345,7 +345,7 @@ body > footer {
     text-align: center;
     background-color: #111;
     background-image: url('../img/background.jpg');
-    background-position: top center;
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
 }
